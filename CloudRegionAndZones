@@ -1,0 +1,12 @@
+IAM - Identity And Access Management
+  Authentication
+  Authroization
+  Root User 
+  Different roles.
+Regions and Zones
+  Low Latency 
+  High availability
+  Fault tolerance
+  Global footprint
+  Maintain Governments regulations. 
+Region  --> Availablitiy zone, Availability zone (2 min & 6 max)  --> data center
