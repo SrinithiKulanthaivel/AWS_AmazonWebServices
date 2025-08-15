@@ -1,0 +1,46 @@
+IaaS - Infrastructure as a Service (Computer, data Storage space, Networking features) eg: EC2
+PaaS - Platform as a Service (all above, + application OS, runtime) we need to handle our code & app eg: ELB, ECS, RDS
+
+
+* EC2 - Elastic Cloud Compute  (Virtual Servers)
+    Create and manage lifecycle
+    Attach Storage
+    network connectivity 
+    Load Balancing and Auto scaling
+    * AMI - Amazon Machine Image - we can create the EC2 instance easily using AMI which decides the OS, Storage, application, server.
+    Public Key - which will be stored by AWS
+    Private key - which will be stored by us. 
+    Comments for the server: 
+        sudo su - > super user
+        yum update -y -> to update all the software
+        yum install httpd -> to install web server
+        systemctl start httpd -> used to start webserver
+        systemctl start httpd -> used to start automatically when system restart
+* Security Groups - used to maintain what comes in and goes out. 
+    Inbound rule - Indicates what request comes in like SSH, HTTP 
+    Outbound rule - Indicates what request server makes to other servers.
+* IP Address - Need to have Id address to access the instances. 
+    Public IP - Access to the internet and changes everytime when start and stop the server
+    Private IP - Access to the Corporate company - we cannt change the Private ip. 
+    Elastic IP or Constant Public IP - we can make the public IP address also constant using this.
+    Elastic IP can be switch between instance in the same region. 
+    Elastic IP will cost even if it is not used, so we need to conciously stop it. 
+* ELB - Elastic Load Balance (public / private)
+    Distribute traffic across different EC2 instance, in the same/different zone in the single region. 
+    - Classic Load balance - not recommended now
+    - Application Load Balancer - hightly used - http/https (Layer 7)
+    - Network Load Balancer - highly used - TCP, TLS & UDP (Layer 4)
+    - Gateway Load Balancer - used to deploy, scale & run third party Virtual applicaitons.
+Availablility 
+    99.95 - 22 minutes/month
+    99.99 - 4.5 minutes/month - four 9's
+    99.999 - 26 seconds / months - five 9's
+Scaling 
+    Vertical Scaling - Increasing the size of Instance  from micro to max server -> o - 0
+    Horizontal Scaling - Increasing the number of instance. -> ooooo
+EC2 - Tanancy 
+    Shared Tanancy - Single Host Machine can have instance of multiple Consumer.
+    Dedicated Tanancy - Single Host Machine can have instances of Single consumer. 
+
+
+    
