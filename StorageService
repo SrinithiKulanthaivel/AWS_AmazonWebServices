@@ -1,0 +1,35 @@
+Amazon S3 (Simple Storage Service) / Object Storage
+    We need to create a bucket and store the object in it.
+        Each object in the bucket will have a separate key
+        Each Object can store max of 5TB.
+    Store large value of data using Key - Value apprach
+    Proivde REST API to access & modify resource
+    99.99 % availability. (11 -9"s) 99.99999999999 Durability
+    Objects are replicated in the same region
+    Support all file types like text, binary, backup and Archieve.
+    backup of database and storage devices.
+    Stage data during on-premises to cloud migration. 
+
+Storage Class     -> AZ     -> Scenario 
+standard     -> >=3     -> Frequently accessed data 
+Standard(IA)  -> >=3    -> Long lived InFrequently accessed data (backups)
+One-zone (IA)  -> 1   -> Long Lived Infrequently accessed data. NON- Critical data 
+Intellignet tiering -> >=3  -> Long Lived data , Changing and unknown-pattern data
+Glacier  -> >=3   -> Archive data with retrival time minutes to hours
+Glacier Deep Archive ->   >=3   -> Archive data with retrival times in hours 
+
+
+Block Storage & File Storage 
+Block Storgage : like how a disk is attached to our computer. 
+      Amazon EBS (Elastic Block Storage) - Virtual store. 
+            Network block storage - virtual store connected through network
+            Provisioned capacity , 99.999 availability and independent. 
+      Instance store - physically attached store -
+            Ephemeral Storage - temporary data like cache or scratch files. but very fast and fixed size.
+  A single block will attach to a virtual server. One to many relation
+  block -> VServer or block, block -> Vserver. 
+
+File Storage : like if we create a file and if we are sharing the file with someone. many to many relation. 
+  Amazon EFS (Elastic File Storage)
+  Amazon FSx Windows File server
+  Amazon Fsx For Lustre (high performance)
