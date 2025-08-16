@@ -1,0 +1,44 @@
+Elastic BeanStalk - PaaS (need to care only about application)
+    Simplest way to deploy and scale our application in web. Like end - end web application management. 
+    Usually we need to create EC2 and then add LB and then add Auto Scaling.... in manual way. But it simply the process.
+    It supports Java, ruby, .net, node.js, php, go and Docker apps.
+    It takes care of Auto Scaling, LB, platform updates, Health monitoring etc. 
+  Features: 
+   * Application - app + version + environment + configuration
+   * App Version - version of deployed code (stored in S3)
+   * Environment - Different environment  we can deploy differnt version
+
+AutoScaling Component. 
+    Vertical Scaling - Increase the size -> o -  O
+    Horizontal Scaling - Increase the number -> 0 - 0000
+  AutoScaling Component : EC2 instance and AMI 
+  AutoScaling Group : Min , Max and desire size of ASG
+  AutoScaling Policy : When - Need to increase/ decrease based on CPU, usage 
+
+ServerLess : AWS Lambda + Lambda function  + API Gateway 
+    Serverless means not like there is no server, some server will run in the background but we dont need to take care of it. we dont care about infrastructure. 
+    Payfor what we used like no.of request, duration of request, memory consumed. 
+
+Amazon LightSail 
+    pre-configured development stacks like LAMP, ngnix, MEAN and Node.js
+    Run website on wordpress, magento, Joomla
+    Low, predictable monthly price.
+AWS Batch :
+    Run batch computing workload on AWS Batch
+    Use Amozon EC2 or EC2 spot instance for cost reduction.
+AWS cloud9 :
+    A cloud based IDE, which help to write, run and debug the code with Just the Browser. Supports differnet languages.
+AWS CloudShell :
+    Helps AWS users to quickly access the AWS services via comment line. it is pre-authenticated. 
+AWS Amplify : 
+    Helps to quickly build & deploy the responsive web and mobile application with authentication and API capabilities. 
+Amazon CodeCatalyst :
+    Quickly get started with development of the application in AWS. Spark of faster planning, development and delivery lifecycle in AWS.
+    Offers Blueprint for various programming languages. Supports CICD pipelines, automation and issue tracking. 
+AWS CodeArtifact : 
+    A development team looking for a centralized repository to store and manage reusable code artifact and dependencies. 
+    Integrated with Maven, gradle, npm, ...
+    Give a finegrained permission (access control )to the team members. 
+
+
+    
