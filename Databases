@@ -45,4 +45,12 @@ Amazon RedShift - Run complex queries against data wharehouse both structure and
 Amazon RedShift Spectrum - Run queries against S3 and stored the entire data from s3 into warehouse.
 Amazon Anthena - Running Ad-hoc queries without worring about the computer cluster (serverLess)
 
+Amazon DynamoDb
+    Fast, Scalable, distributed to any scale
+    flexiable key-value (No SQL) & document database(Schemaless)
+    millisecond response
+    Autoscaling and maintain 3 replicas within same region
+    No need to provision a database
+    Expensive and serverless
+
 
