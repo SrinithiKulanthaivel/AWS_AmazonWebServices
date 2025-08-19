@@ -1,0 +1,48 @@
+Relational Database - traditional database which has relations.
+    OLTP - Online Transcational Process -  small no.of user performing larger no.of Operations. 
+    OLAP - online Analytical Processing 
+
+Amazon RDS _
+  Pre-defined Schema, strong transcational capabilities, Complex queries. 
+Features: 
+    Multi AZ deployment
+    Read Replicas : 
+      Same Zone +
+      Different Zone  ++
+      Even Different region +++
+  Storage autoscaling (upto mentioned config)
+  Automated backups 
+  Manual snapshots.
+
+DynamoDB - Highly scalable massive read/write operations. like million of writes/second. 
+AmazonS3 - Need to upload files uisng readAPI, Like Put, get
+Custom Installation of DB - Heavy customization of the data or need access to EC2 instance. 
+
+OLAP - Online Analytical Processing - Helps in analyzing petabytes of data. like data ware house apps, data intelligent apps,...
+Data is in multiple dbs ,....
+
+OLTP :   
+  Each table row is stored together.
+  Efficinet for processing small transcations
+OLAP :
+  Each table column is stored together.
+  High compression - stores petabytes of data
+  Distribute data - one table in multiple cluster nodes
+  Execute single query accross multiple nodes. 
+
+Amazon Redshift: 
+  Massively Parallel Processing (MPP) - Storage and processing can be split bt multiple nodes
+  Columnar data storage 
+  High data compression
+A single row of data can be stored in multiple nodes
+A single query can be splitted to multiple nodes for execution
+Start with a single node configuration and scales to maximum no of nodes
+we can also dynamically add or remove nodes. 
+
+
+Amazon EMR - Big data processing like Apache Spark, Hadoop, presto or Hbase to do large scale of data processing which needs high customization. 
+Amazon RedShift - Run complex queries against data wharehouse both structure and unstructured data. 
+Amazon RedShift Spectrum - Run queries against S3 and stored the entire data from s3 into warehouse.
+Amazon Anthena - Running Ad-hoc queries without worring about the computer cluster (serverLess)
+
+
