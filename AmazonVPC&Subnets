@@ -62,13 +62,31 @@ using three method :
 NACL - Network Access Control List
   Usually security Groups (SG) control traffic to a specific resource in a subnet, but if we want to Stop a traffic before entering to the subnet is NACL.
 
-  user ----> NACL -----> Security Group in SubnetNet -----> resource. 
+  user ----> NACL -----> SubnetNet -------> Security Group -----> resource. 
 
 NACL provides Stateless firewall at subnet level. 
 Default NACL allows all inbound and outbound traffic
 Custom NACL denies all inbound and outbound traffic
 Rules have a priority number 
     Lower number => Higher Priority.
+
+Difference bt NACL & Security Group 
+
+  user ----> NACL -----> SubnetNet -------> Security Group -----> resource. 
+
+Feature            ---> NACL                       --> Security Group
+=> Assigned to all the instance in subnet         => Assigned to specifc resource /instance to/from subnet
+=> Both Allow and Deny rules                      =>  Allow rules only 
+=> Stateless, need to explictly allow             => Stateful, retrun traffic is automatically allowed.
+return traffic.
+=> Traffic rules are priortrized.                 => Traffic allowed if there is a matching rule.
+eg: 
+99 - only specific resource - high priority
+100 - allow all  - low priority
+
+
+
+
 
 
 
