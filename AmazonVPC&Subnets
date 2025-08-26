@@ -1,0 +1,78 @@
+Virtual Private Cloud - VPC
+    An isolated network in AWS cloud. All the within a VPC is isolated to another all other VPCs.
+    Secure access from unauthorized 
+    Enable secure connection between the cloud resources.
+
+
+Subnet : Public Subnet & Private Subet.
+
+public ----------------> ELB  ----------------> EC2 Instance  -------------------> Database
+
+Public - public
+ELB ---- Public 
+EC2 ---- Private
+DB ----- Private
+
+The resource which are public will be placed under public subnet.
+The resource which are private will be placed under private subnet.(resources which are inside VPC only can access EC2 / DB)
+But resource in public subnet can talk to resources in private subnet.
+
+
+AWS   -----> VPC , VPC,...    -----> region  ---> diff Availability zone   ----> subnets 
+
+Each VPC created under a specific region
+Each subnet created in a availability zone.
+example : VPC - us-east1  => Subnet in us-east-a1 or us-east-a2 or ...
+
+Router and Router table : route tables are used for routing. 
+
+Router - like cable in the TV channel route table will redirect us.
+
+user  -----> route1   ----> route2 ------> route3 ------> site.
+
+Each router has a set of rules, that helps to deticate it path to the destinated IP address. 
+Route tables are associated with VPCs and subnets.
+Each route table consiste so set of rules called routes. 
+Each rule has a destination and target. 
+
+Route rule for subnets :
+rule 1 --> 172.31.0.0/16     ----> Local      ----> Local routing      (private)
+rule 2 --> 0.0.0.0/0        -----> igw-123456   -->Internet routing    (public)
+
+Public Subnet : route through internet gateway (igw)
+Allow subnet to internet 
+Allow internet to subnet
+
+Private Subnet : route through Network Address Translation (nat)
+Not allow internet to subnet.
+Might allow subnet to internet. (using NAT)
+
+
+NAT - Network Address Translation 
+Incase 
+    - allow instance in private subnets to download software updates. or 
+    - instance in private subnet connect privately with other instance in AWS
+
+using three method :
+    NAT Gateway - Managed Service
+    NAT Instance - install a EC2 instance with specific NAT AMI and gateway.
+    Egress-only Internet Gateway - Ipv6 - allow only outbound traffic from subnet to internet.
+
+
+NACL - Network Access Control List
+  Usually security Groups (SG) control traffic to a specific resource in a subnet, but if we want to Stop a traffic before entering to the subnet is NACL.
+
+  user ----> NACL -----> Security Group in SubnetNet -----> resource. 
+
+NACL provides Stateless firewall at subnet level. 
+Default NACL allows all inbound and outbound traffic
+Custom NACL denies all inbound and outbound traffic
+Rules have a priority number 
+    Lower number => Higher Priority.
+
+
+
+
+
+
+
