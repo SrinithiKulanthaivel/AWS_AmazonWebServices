@@ -30,3 +30,12 @@ SQS - Simple Queue Service
       Create an SNS Topic
       Subscribers can register for a Topic
       when SNS Topic receives an event notification, it is broadcast to all Subscribers.
+
+Amazon CloudFront : if we want to distribute content to all over the Globe, then we will go for edge location. And from the edge location we can enable serving content directly using CloudFront. 
+      Used to distribute the data from edge locations. 
+      Static web apps, audio, video and software downloads, Dynamic web apps
+      support media streaming with HTTP and RTMP.
+      Integrates with AWS Shield to protectg from DDoS attach
+      Integrates with AWS Web Application Firewall (WAF)
+      Zero cost for data transfer between S3 and CloudFront. 
+
