@@ -1,0 +1,23 @@
+IAM - Identity and Access Management.
+    Authendication
+    Authorization
+    Users can be either AWS users or Federated users ( external authendicated users like google, fb)
+    Fine Granular control
+
+IAM Users : Users created in an AWS account.
+    Has Credentials (userNam / passwd or access key )
+IAM groups : Collection of IAM users
+Roles : Temporary identities
+    Does not have credentials attached
+    Expire after a set period of time
+Policies : Defined Permissions
+    AWS Managed Policies - Predefined policies
+    Customer Managed policies - Created by us
+    Inline Policies - Directly created to a user, group or role. 
+
+Encryption - it is the process of encrypting the data that we use or store.
+    Encrypt Data at rest - like stored in db
+    Encrypt Data at transint - like moving data in a connection.
+  Two types of encyption:
+    Symmetric Key Encryption - using the same Key for both encyrption and decryption.
+    Asymmmetric Key Encryption - using different Key for encyrption and decryption ie: Private key & Public Key.
