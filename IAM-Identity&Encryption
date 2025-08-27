@@ -21,3 +21,20 @@ Encryption - it is the process of encrypting the data that we use or store.
   Two types of encyption:
     Symmetric Key Encryption - using the same Key for both encyrption and decryption.
     Asymmmetric Key Encryption - using different Key for encyrption and decryption ie: Private key & Public Key.
+
+Cloud Trail : Track eventsw, API calls, changes made to your AWS resources.
+    Like : who made the request ?
+        what action was performed?
+    Delivers the log files to S3(default) / Amazon cloud watch .
+    Can also setup SNS notifications for the log file delivery. 
+
+AWS Config : Create a complete inventory (track) of your AWS resources.
+    how a resource was configured at any point of time.
+    Config of deleted resource would be maintained
+    Store history file to S3 bucket every 6 hours
+    Take config snapshot when required.
+Amazon CloudWatch : Monitoring and observability service for all the AWS services.
+    Collects, monitoring and operational data in the form of logs, metrics and events.
+    Set alarms, visualisze logs, take automated actions and troubleshoot issues.
+    Integrates with more than 70 AWS services. 
+
