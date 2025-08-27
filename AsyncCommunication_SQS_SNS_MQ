@@ -1,0 +1,32 @@
+Synchronize Communication - it will execute in an order. eg : sender  ---> intermediate Service   ---> receiver
+  in the Synch communication it will execute in the order and if the receiver went down, then the message will be lost. 
+Asynchronize Communication - It will execute randomly through queues. eg : Sender ----> queue ------> receiver
+  in the Asynch Communication, the sender don't need to bother about receiver.Message stored in queue and once the receiver is up. it will fetch from queue.
+  Two types of Asynch communication, 
+    SQS - Simple Queue Service.
+    SNS - Simple Notification Service.
+    Amazon MQ = SQS + SNS
+
+SQS - Simple Queue Service
+    Reliable, Scalable, fully-managed message queuing service.
+    High availability
+    Unlimited Scaling - Auto scale to process billions of messages
+    Low cost
+    SQS - is of two types:
+      Standard Queue 
+      FIFO Queue
+    Standard Queue :
+      Unlimited throughput
+      But no guarantee of ordering 
+      And no guarantee of exactly-once processing but guarantee atlest once delivery.
+    FIFO Queue :
+      First-In-First-Out delivery
+      Exactly-Once processing but throughput is lower.
+    
+ SNS - Simple Notification Service. - similar to Kafka
+    Publish-Subscribe (Pub_sub) paradigm
+    broadcast Asynchronours event notifications
+    Simple Process :
+      Create an SNS Topic
+      Subscribers can register for a Topic
+      when SNS Topic receives an event notification, it is broadcast to all Subscribers.
