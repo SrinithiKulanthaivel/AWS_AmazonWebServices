@@ -29,7 +29,14 @@ Amazon Data Pipeline : Used to process and move data between different resources
 Amazon Database Migration : migrating databases from our Data center to AWS
       Homogenerous Migration - Oracle to Oracle
       Heterogeneous Migration - Oracle to Amazon aurora, sql to amazon aurora.
-         In heterogeneous Migration there involves a service called Amazon Schema Conversion Tool (SCT)
-         while converting from one db type to another, first we need to convert hte schema using SCT. 
+         In heterogeneous Migration there involves a service called Amazon Schema Conversion Tool (SCT)        
+        while converting from one db type to another, first we need to convert hte schema using SCT. 
     Free for 6 month for redshift, aurora, dynamo DB.
     Continuous Data Replication can be used for Diaster recovery. 
+
+Streaming Data :
+Amazon Kinesis : Handles Streaming data.(alternate to Kafka) Differnet type of Kinesis is there based on the usage.
+    Amazon Kinesis Data Streams - Process data streams.
+    Amazon Kinesis Firehose     - Data ingestion/store for streaming data: S3, ElasticSearch
+    Amazon Kinesis Analytics    - Run queries against Streaming data.
+    Amazon Kinesis Video Stream - Monitor video streams.
