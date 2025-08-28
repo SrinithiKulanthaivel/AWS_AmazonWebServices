@@ -1,0 +1,35 @@
+Amazon SnowBall : Terabyte to PetaByte. Physicall tansfer
+    Used to transfer (large set of data) dozens of terabye(tb) to  petaByte(PB) of data from ON-premises to AWS
+    Involves physicall shipping (physical transfer ), involves simple process :-
+        Request for Snowball 
+        copy data 
+        ship it back
+    100TB (80 TB usable) per appliances.
+    Manage jobs with AWS Snowball console
+    Data is automatically encrypted with KMS (AEs-256)
+
+
+Amazon SnowMobile : Petabyte to Exabytes. Physical transfer
+    If I want to transfer dozend of petabytes to exabytes of data, from On-permises to AWS then I can use snowmobile.
+    100 PB storage per truck
+    if needed, we can use multiple truck to transfer the data physically.
+    Data is encrypted with KMS(AES - 256)
+
+
+Amazon DataSync : Transfer file storage to Cloud. Online transfer
+    Secure and 10X faster (100s of TB) data transfer from/to AWS over internet or Direct Connect.
+    Transfer from Onpremise file storage(NFS,SMB) to S3, EFS or FSx for windows.
+    Monitor progress using Cloudwatch.
+
+Amazon Data Pipeline : Used to process and move data between different resources. for stored data not for streaming data.
+    Eg : RDS  -> S3 -> EMR -> S3 -> Redshift. moves data from RDS to Redshift. 
+    Create complex data processing workloads that are fault tolerant, repeatable and highly available.
+    Launches requied resource and delete it after execution. 
+
+Amazon Database Migration : migrating databases from our Data center to AWS
+      Homogenerous Migration - Oracle to Oracle
+      Heterogeneous Migration - Oracle to Amazon aurora, sql to amazon aurora.
+         In heterogeneous Migration there involves a service called Amazon Schema Conversion Tool (SCT)
+         while converting from one db type to another, first we need to convert hte schema using SCT. 
+    Free for 6 month for redshift, aurora, dynamo DB.
+    Continuous Data Replication can be used for Diaster recovery. 
