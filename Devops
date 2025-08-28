@@ -1,0 +1,37 @@
+Devops - where we create our application and deploy it in the cloud.
+  CICD pipeline :-
+  CI - Contineous Integration  - Contineously running our tests and packaging. 
+  CD - Contineous Deployement  - Contineously Deploying to our test environment.
+  CD - Contineous Delivery     - Contineously deploy to production.
+
+  Using CICD - we can contineously made changes to our application. and AWS follows below four steps for these
+        AWS CodeCommit - Private source control (Git)
+        AWS CodePipeline - Orchestrate CICD pipelines
+        AWS CodeBuild  - Build and TestCode (application package or containers)
+        AWS CodeDeploy - Automate Deployment (EC2, ECS, ElasticBeanstalk, Lambda, etc)
+
+  Devops - IAAC (Infrastructure As A Code) 
+    Generally we used to create instance and deploy our application multiple times, and each time it involves the below process
+      CreateTemplate   ----> Provision Server ----> Install Software   ---> config Software ---> Deploy APP
+    IAAC - treat infrastructure the same way as application code.
+    Track infrastructure changes over time
+    Bring repeatability into your infrastructure.
+    Two key parts
+      Infrastructure Provisioning:
+          Provision compute, db, storage and network
+          Open source cloud neutral - terraform
+          AWS Service - CloudFormation
+      Configuration Management
+          Install right software on provisioned resource
+
+AWS CloudFormation - Use template to create the resource. using it we can easily create multiple resource , multiple no.of times by simply executing the scirpt. (Json / Yaml)
+  Important template elements 
+      {
+        AWSTemplateFormatVersion : "version date".
+        Description : "Json String",
+        Metadata : {"provies metadata"},
+        Parameter : {"used to provide runtime values eg: EC2 instance size small/large/medium"},
+        Resources : {"Need to mention all the required resource to be created"},
+        Mappings : {"Helps us to map key value pair based on environments"},
+        Outputs : {"Return vlaues from executions"}
+      }
