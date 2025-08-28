@@ -31,11 +31,34 @@ SQS - Simple Queue Service
       Subscribers can register for a Topic
       when SNS Topic receives an event notification, it is broadcast to all Subscribers.
 
-Amazon CloudFront : if we want to distribute content to all over the Globe, then we will go for edge location. And from the edge location we can enable serving content directly using CloudFront. 
-      Used to distribute the data from edge locations. 
+Amazon CloudFront :  Different Sources (S3, EC2, ELB )   ------> Cloud Front  -------> Edge Location. 
+      if we want to distribute content to all over the Globe, then we will go for edge location. 
+      Create a CloudFront distribution to get the content from differnt AWS(below ) Service and to distribute the content to the edge locations. 
+      CloudFront Used to distribute the data to edge locations. And source content can be from S3, EC2, ELB and External websites. 
+      If the content is not available in the edge location, then it will retrive it from the above sources and cached it (default cache time 24 hr).
+  UseCases : 
       Static web apps, audio, video and software downloads, Dynamic web apps
       support media streaming with HTTP and RTMP.
       Integrates with AWS Shield to protectg from DDoS attach
       Integrates with AWS Web Application Firewall (WAF)
       Zero cost for data transfer between S3 and CloudFront. 
 
+Amazon Edge Locations : Amazon service has 200+ edge locations, to increase the delivery speed and reduce latency. 
+    Different services uses Edge locations based on the need.
+    Amazon CloudFront :- it will distribute your static content (audio, video, music) from different sources across global network of the edgeLocations. 
+    Global Accelerator :- it intelligently routes the traffic to the nearest edge Locations to achive low latency.
+    S3 Transfer Accelerator :- Accelerates long distance transfers to and from , from the S3 buckets. 
+
+Route 53 : Used to route different request to the correct domain. 
+    Generally, setting up a website involves these three steps
+        1. Domain register
+        2. Updating content to the site.
+        3. Routing requests to the website using DNS.
+    Route 53 = Domain Register + request routing (DNS)
+  Different type of routings
+Simple      - Maps a domain name to IP addresses.
+Weighted    - Maps a single DNS name to multiple weighted resources like 10% to A and 90% to B
+Latency     - Choose the one with the minimum latency
+Failover    - Active-passive failover.
+GeoProximity- Choose the nearest resource
+GeoLocation - Choose based on the location of the user. (India go here, china go here)
